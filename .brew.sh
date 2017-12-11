@@ -159,6 +159,7 @@ apps=(
   istat-menus
   libreoffice
   little-snitch
+  transmit
 )
 
 echo "[+] installing apps ..."
