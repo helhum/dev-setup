@@ -748,15 +748,15 @@ defaults write com.twitter.twitter-mac HideInBackground -bool true
 ###############################################################################
 # dnsmasq                                                                     #
 ###############################################################################
-echo "[+] configure dnsmasq to use *.dev -> 127.0.0.1 as wildcard for local development ..."
+echo "[+] configure dnsmasq to use *.test -> 127.0.0.1 as wildcard for local development ..."
 cd $(brew --prefix)
 mkdir -p etc
 rm -f etc/dnsmasq.conf
-echo 'address=/.dev/127.0.0.1' > etc/dnsmasq.conf
+echo 'address=/.test/127.0.0.1' > etc/dnsmasq.conf
 sudo cp -v $(brew --prefix dnsmasq)/homebrew.mxcl.dnsmasq.plist /Library/LaunchDaemons
 sudo launchctl load -w /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
 sudo mkdir -p /etc/resolver
-sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/dev'
+sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/test'
 cd -
 
 ###############################################################################
