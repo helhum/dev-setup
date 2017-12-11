@@ -746,6 +746,11 @@ defaults write com.twitter.twitter-mac ESCClosesComposeWindow -bool true
 defaults write com.twitter.twitter-mac HideInBackground -bool true
 
 ###############################################################################
+# touchid for sudo                                                            #
+###############################################################################
+grep -q 'auth       sufficient     pam_tid.so' /etc/pam.d/sudo || sed '1s;^;auth       sufficient     pam_tid.so\'$'\n;' /etc/pam.d/sudo > tmp.sudo && sudo mv tmp.sudo /etc/pam.d/sudo
+
+###############################################################################
 # dnsmasq                                                                     #
 ###############################################################################
 echo "[+] configure dnsmasq to use *.test -> 127.0.0.1 as wildcard for local development ..."
