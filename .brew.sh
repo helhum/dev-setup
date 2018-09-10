@@ -160,6 +160,7 @@ apps=(
   libreoffice
   little-snitch
   transmit
+  insomnia
 )
 
 echo "[+] installing apps ..."
