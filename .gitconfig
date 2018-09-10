@@ -155,7 +155,7 @@
 
     default = tracking
     # Make `git push` push relevant annotated tags when pushing branches out.
-    followTags = true
+    #followTags = true
 
 [branch]
 	autosetuprebase = remote
