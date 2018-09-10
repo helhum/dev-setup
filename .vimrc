@@ -98,4 +98,6 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
     " Treat .md files as Markdown
     autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+    " Jump to last editing position
+    au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
