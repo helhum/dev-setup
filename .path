@@ -1,1 +1,1 @@
-export PATH="$HOME/.bin:$PATH:$HOME/.composer/vendor/bin:node_modules/.bin:./Scripts:./vendor/bin"
+export PATH="$HOME/.bin:$PATH:$HOME/.composer/vendor/bin:node_modules/.bin:./vendor/bin"
