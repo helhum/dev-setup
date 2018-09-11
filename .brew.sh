@@ -161,6 +161,7 @@ apps=(
   little-snitch
   transmit
   insomnia
+  tunnelblick
 )
 
 echo "[+] installing apps ..."
