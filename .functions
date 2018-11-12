@@ -1,3 +1,8 @@
+# import z
+if [ -f ~/.init/z.sh ]; then
+   source ~/.init/z.sh
+fi
+
 # import bashmarks
 if [ -f ~/.init/bashmarks.sh ]; then
    source ~/.init/bashmarks.sh
