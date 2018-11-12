@@ -28,5 +28,5 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # Symfony console commands auto completion
 if [ -f ~/.composer/vendor/bin/symfony-autocomplete ]; then
-  eval "$(symfony-autocomplete --aliases=c --aliases=surf --aliases=php-cs-fixer --aliases=typo3cms)"
+  eval "$(symfony-autocomplete --aliases=c --aliases=dc --aliases=surf --aliases=php-cs-fixer --aliases=typo3cms)"
 fi;
