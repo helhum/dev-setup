@@ -112,8 +112,6 @@ brew install graphicsmagick
 #brew link libxml2 --force
 #brew link libxslt --force
 
-brew install lastpass-cli --with-pinentry --with-doc
-
 # Further binaries
 binaries=(
   node
@@ -136,10 +134,8 @@ apps=(
 # development
   atom
   virtualbox
-  vagrant
   macdown
-  captain
-  sequel-pro
+  sequel-ace
   docker
   phpstorm
   mamp
@@ -187,6 +183,7 @@ macApps=(
   543327839 #'GPX Reader'
   874920950 #'Proxy'
   430255202 #'Mactracker'
+  1518036000 # Sequel Ace
 )
 echo "[+] installing apps from mac appstore (you have to be logged in to your iCloud account!) ..."
 mas install ${macApps[@]}
@@ -210,7 +207,6 @@ echo "[+] install quicklook features ..."
 brew cask install ${quicklookFeatures[@]}
 
 # Set login items
-osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/TotalFinder.app", hidden:false}' > /dev/null
 osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/BetterTouchTool.app", hidden:false}' > /dev/null
 #osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Dropbox.app", hidden:false}' > /dev/null
 osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Bartender 3.app", hidden:false}' > /dev/null

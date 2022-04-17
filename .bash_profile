@@ -1,3 +1,4 @@
+source ~/.profile
 # Use sensible bash
 if [ -f ~/.init/sensible.bash ]; then
    source ~/.init/sensible.bash
@@ -13,14 +14,14 @@ unset file;
 
 # Add tab completion for many Bash commands
 if which brew > /dev/null && [ -f "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]; then
+    export BASH_COMPLETION_COMPAT_DIR="$(brew --prefix)/etc/bash_completion.d"
     source "$(brew --prefix)/etc/profile.d/bash_completion.sh";
-elif [ -f /etc/bash_completion ]; then
-    source /etc/bash_completion;
 fi;
 
 # Enable tab completion for `g` by marking it as an alias for `git`
-if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-    complete -o default -o nospace -F _git g;
+if type ___git_complete &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+    ___git_complete git __git_main;
+    ___git_complete g __git_main;
 fi;
 
 # Add `killall` tab completion for common apps
@@ -28,5 +29,5 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # Symfony console commands auto completion
 if [ -f ~/.composer/vendor/bin/symfony-autocomplete ]; then
-  eval "$(symfony-autocomplete --aliases=c --aliases=dc --aliases=surf --aliases=php-cs-fixer --aliases=typo3cms)"
+  eval "$(symfony-autocomplete --aliases=c --aliases=dc --aliases=typo3 --aliases=typo3cms --aliases=dt3cms)"
 fi;
