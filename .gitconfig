@@ -1,6 +1,7 @@
 [user]
 	name = Helmut Hummel
-	email = info@helhum.io
+	email = typo3@helhum.io
+	signingkey = B367F506636EE4BA5A200D30D267B02C5A83969C
 
 [alias]
 
@@ -77,12 +78,11 @@
     }; f"
     st = status
   	pr = create-pull
-    cp = cherry-pick
+    pi = cherry-pick
     search = search-commit-message
-  	oldest-ancestor = !bash -c 'diff --old-line-format= --new-line-format= <(git rev-list --first-parent \"${1:-master}\") <(git rev-list --first-parent \"${2:-HEAD}\") | head -1' -
-  	start = !git init && git commit --allow-empty -m \"Initial commit\"
-#    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --\n
-#  	save = !git stash save $(date +%F_%T)
+    oldest-ancestor = !bash -c 'diff --old-line-format= --new-line-format= <(git rev-list --first-parent \"${1:-master}\") <(git rev-list --first-parent \"${2:-HEAD}\") | head -1' -
+    start = !git init && git symbolic-ref HEAD refs/heads/main && git commit --allow-empty -m \"Initial commit\"
+    mr = create-mr
 
 [rerere]
 	enabled = 1
@@ -182,7 +182,7 @@
 
     insteadOf = "gist:"
 
-[url "ssh://helhum@review.typo3.org:29418"]
-
-  	pushInsteadOf = git://git.typo3.org
-    pushInsteadOf = https://git.typo3.org
+[http]
+	postBuffer = 524288000
+[init]
+	defaultBranch = main
