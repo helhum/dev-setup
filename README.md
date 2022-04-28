@@ -177,10 +177,10 @@ To update later on, just run that command again.
 
 If `~/.path` exists, it will be sourced along with the other files before any feature testing (such as detecting which version of `ls` is being used takes place.
 
-Here’s an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
+Here’s an example `~/.path` file that adds `/opt/homebrew/bin` to the `$PATH`:
 
 ```bash
-export PATH="/usr/local/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 ```
 
 #### Optional: Add Custom Commands
@@ -424,7 +424,7 @@ To check your version of Git, run the following command:
 
     $ git --version
 
-And `$ which git` should output `/usr/local/bin/git`.
+And `$ which git` should output `/opt/homebrew/bin/git`.
 
 Let's set up some basic configuration. Download the [.gitconfig](https://raw.githubusercontent.com/helhum/dev-setup/master/.gitconfig) file to your home directory:
 
