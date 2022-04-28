@@ -151,7 +151,7 @@ apps=(
   moneymoney
   appcleaner
   hazel
-  gpgtools
+  gpg-suite
   bettertouchtool
   bartender
   caffeine
