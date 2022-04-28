@@ -27,7 +27,7 @@ brew upgrade
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 #brew install coreutils
-#sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
+#sudo ln -s /opt/homebrew/bin/gsha256sum /opt/homebrew/bin/sha256sum
 
 # Install some other useful utilities like `sponge`.
 #brew install moreutils
@@ -45,8 +45,8 @@ sudo bash -c 'echo /opt/homebrew/bin/bash >> /etc/shells'
 # Change to the new shell, prompts for password
 chsh -s /opt/homebrew/bin/bash
 
-# Install `wget` with IRI support.
-brew install wget --with-iri
+# Install `wget`
+brew install wget
 
 
 # Install Python
@@ -54,7 +54,7 @@ brew install wget --with-iri
 #brew install python3
 
 # Install more recent versions of some OS X tools.
-brew install vim --with-override-system-vi
+brew install vim
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 #brew install aircrack-ng
