@@ -120,11 +120,12 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 # Set a custom wallpaper image. `DefaultDesktop.jpg` is already a symlink, and
 # all wallpapers are in `/Library/Desktop Pictures/`. The default is `Sierra.jpg`.
-sudo rm -rf "~/Library/Application Support/Dock/desktoppicture.db"
+# sudo rm -rf "~/Library/Application Support/Dock/desktoppicture.db"
 # the simple way does not work any more on sierra or mojave
+# all this does not seem to be possible any more
 #sudo ln -s /Users/helmut/Pictures/thunderstorm.jpg /System/Library/CoreServices/DefaultDesktop.jpg
-[ -f /Users/helmut/Pictures/Mojave.heic ] || sudo cp "/Library/Desktop Pictures/Mojave.heic" /Users/helmut/Pictures/Mojave.heic
-sudo cp /Users/helmut/Pictures/thunderstorm.heic "/Library/Desktop Pictures/Mojave.heic"
+#[ -f /Users/helmut/Pictures/Mojave.heic ] || sudo cp "/Library/Desktop Pictures/Mojave.heic" /Users/helmut/Pictures/Mojave.heic
+#sudo cp /Users/helmut/Pictures/thunderstorm.heic "/Library/Desktop Pictures/Mojave.heic"
 
 
 ###############################################################################
