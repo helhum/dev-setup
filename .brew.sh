@@ -133,7 +133,7 @@ brew install ${binaries[@]}
 mkcert -install
 
 # Install Casks
-brew tap caskroom/versions
+brew tap homebrew/cask-versions
 
 apps=(
 # core
