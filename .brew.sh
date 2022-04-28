@@ -15,6 +15,8 @@ if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+alias brew='/opt/homebrew/bin/brew'
+
 # Make sure we’re using the latest Homebrew.
 brew update
 
@@ -88,7 +90,7 @@ brew install git
 #brew install git-flow
 brew install git-extras
 brew install hub
-brew install graphicsmagick
+#brew install graphicsmagick
 #brew install lua
 #brew install lynx
 #brew install p7zip
@@ -112,6 +114,10 @@ brew install graphicsmagick
 
 # Further binaries
 binaries=(
+  colima
+  docker
+  mkcert
+  drud/ddev/ddev
   node
   dnsmasq
   htop
@@ -121,6 +127,9 @@ binaries=(
 )
 
 brew install ${binaries[@]}
+
+# Generate and install development SSL certs
+mkcert -install
 
 # Install Casks
 brew tap caskroom/versions
