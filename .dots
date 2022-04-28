@@ -16,7 +16,7 @@ function runDots() {
             echo "Syncing the dev-setup repo to your local machine."
             echo "------------------------------"
             echo ""
-            cd ~ && curl -L https://github.com/helhum/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
+            cd ~ && curl -L https://github.com/helhum/dev-setup/tarball/main | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
         fi
         if [ $ARG == "osxprep" ] || [ $ARG == "all" ]; then
             # Run the osxprep.sh Script
@@ -55,14 +55,14 @@ function runDots() {
             echo ""
             ./.osx.sh
         fi
-        if [ $ARG == "php" ] || [ $ARG == "all" ]; then
-            # Run the php.sh Script
-            echo "------------------------------"
-            echo "Setting up php development environment."
-            echo "------------------------------"
-            echo ""
-            ./.php.sh
-        fi
+#        if [ $ARG == "php" ] || [ $ARG == "all" ]; then
+#            # Run the php.sh Script
+#            echo "------------------------------"
+#            echo "Setting up php development environment."
+#            echo "------------------------------"
+#            echo ""
+#            ./.php.sh
+#        fi
     done
 
     echo "------------------------------"

@@ -12,10 +12,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Install if we don't have it
 if test ! $(which brew); then
   echo "Installing homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
-
-brew tap homebrew/php
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -49,8 +47,8 @@ brew install wget --with-iri
 
 
 # Install Python
-brew install python
-brew install python3
+#brew install python
+#brew install python3
 
 # Install more recent versions of some OS X tools.
 brew install vim --with-override-system-vi
@@ -86,7 +84,7 @@ brew install ack
 brew install dark-mode
 #brew install exiv2
 brew install git
-brew install git-lfs
+#brew install git-lfs
 #brew install git-flow
 brew install git-extras
 brew install hub
@@ -120,30 +118,26 @@ binaries=(
   youtube-dl
   thefuck
   mas
-  homebrew/php/arcanist
 )
 
 brew install ${binaries[@]}
 
 # Install Casks
+brew tap caskroom/versions
 
 apps=(
 # core
   alfred
 # development
-  atom
-  virtualbox
   macdown
   sequel-ace
-  docker
   phpstorm
-  mamp
 # misc
   eloston-chromium
   firefox
   imageoptim
   dropbox
-  teamviewer
+  enpass
   moneymoney
   appcleaner
   hazel
@@ -154,9 +148,12 @@ apps=(
   istat-menus
   libreoffice
   little-snitch
+  microsoft-teams
+  slack
   transmit
   insomnia
   tunnelblick
+  visual-studio-code
 )
 
 echo "[+] installing apps ..."
@@ -168,8 +165,6 @@ macApps=(
   671736912 #'FruitJuice'
   409183694 #'Keynote'
   472226235 #'LanScan'
-  456609775 #'Window Tidy'
-  409789998 #'Twitter'
   494803304 #'WiFi Explorer'
   407963104 #'Pixelmator'
   682658836 #'GarageBand'
@@ -178,7 +173,6 @@ macApps=(
   409201541 #'Pages'
   408981434 #'iMovie'
   685953216 #'Instashare'
-  803453959 #'Slack'
   543327839 #'GPX Reader'
   874920950 #'Proxy'
   430255202 #'Mactracker'
@@ -203,7 +197,7 @@ quicklookFeatures=(
   suspicious-package
 )
 echo "[+] install quicklook features ..."
-brew cask install ${quicklookFeatures[@]}
+brew install --cask ${quicklookFeatures[@]}
 
 # Set login items
 osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/BetterTouchTool.app", hidden:false}' > /dev/null
