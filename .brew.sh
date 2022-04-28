@@ -203,7 +203,6 @@ quicklookFeatures=(
   quicklook-csv
   quicklook-json
   qlrest
-  betterzipql
   qlimagesize
   webpquicklook
   suspicious-package
