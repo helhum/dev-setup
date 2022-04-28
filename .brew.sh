@@ -131,6 +131,9 @@ brew install ${binaries[@]}
 # Generate and install development SSL certs
 mkcert -install
 
+# some apps still require rosetta (looking at you enpass :())
+sudo softwareupdate --install-rosetta
+
 # Install Casks
 brew tap homebrew/cask-versions
 
