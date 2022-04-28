@@ -1,1 +1,2 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="$HOME/.bin:$PATH:$HOME/.composer/vendor/bin:node_modules/.bin:./vendor/bin"
