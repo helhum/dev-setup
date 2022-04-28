@@ -125,8 +125,7 @@ binaries=(
 
 brew install ${binaries[@]}
 
-# Install Cask
-brew tap caskroom/versions
+# Install Casks
 
 apps=(
 # core
@@ -140,7 +139,7 @@ apps=(
   phpstorm
   mamp
 # misc
-  google-chrome
+  eloston-chromium
   firefox
   imageoptim
   dropbox
@@ -161,7 +160,7 @@ apps=(
 )
 
 echo "[+] installing apps ..."
-brew cask install ${apps[@]}
+brew install --cask ${apps[@]}
 
 # Install apps from Mac Appstore
 macApps=(
