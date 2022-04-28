@@ -1,4 +1,7 @@
-source ~/.profile
+if [ -f ~/.profile ]; then
+    source ~/.profile
+fi
+
 # Use sensible bash
 if [ -f ~/.init/sensible.bash ]; then
    source ~/.init/sensible.bash
