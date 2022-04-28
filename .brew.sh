@@ -149,6 +149,7 @@ apps=(
   libreoffice
   little-snitch
   microsoft-teams
+  mimestream
   slack
   transmit
   insomnia
