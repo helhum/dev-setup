@@ -22,9 +22,9 @@ if which brew > /dev/null && [ -f "$(brew --prefix)/etc/profile.d/bash_completio
 fi;
 
 # Enable tab completion for `g` by marking it as an alias for `git`
-if type ___git_complete &> /dev/null && [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ]; then¬
-    ___git_complete g __git_main;¬
-fi;¬
+if type ___git_complete &> /dev/null && [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ]; then
+    ___git_complete g __git_main;
+fi;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
