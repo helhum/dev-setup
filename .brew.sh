@@ -119,6 +119,7 @@ binaries=(
   mkcert
   drud/ddev/ddev
   node
+  yarn
   dnsmasq
   htop
   youtube-dl
