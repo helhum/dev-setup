@@ -22,7 +22,7 @@ if which brew > /dev/null && [ -f "$(brew --prefix)/etc/profile.d/bash_completio
 fi;
 
 # Enable tab completion for `g` by marking it as an alias for `git`
-if type ___git_complete &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then¬
+if type ___git_complete &> /dev/null && [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ]; then¬
     ___git_complete g __git_main;¬
 fi;¬
 
