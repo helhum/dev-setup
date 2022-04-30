@@ -55,14 +55,14 @@ function runDots() {
             echo ""
             ./.osx.sh
         fi
-#        if [ $ARG == "php" ] || [ $ARG == "all" ]; then
-#            # Run the php.sh Script
-#            echo "------------------------------"
-#            echo "Setting up php development environment."
-#            echo "------------------------------"
-#            echo ""
-#            ./.php.sh
-#        fi
+        if [ $ARG == "php" ] || [ $ARG == "all" ]; then
+            # Run the php.sh Script
+            echo "------------------------------"
+            echo "Setting up php development environment."
+            echo "------------------------------"
+            echo ""
+            ./.php.sh
+        fi
     done
 
     echo "------------------------------"

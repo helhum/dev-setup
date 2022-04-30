@@ -1,0 +1,3 @@
+#!/bin/bash
+export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
+php $@
