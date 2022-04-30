@@ -1,0 +1,37 @@
+#!/bin/bash
+
+if [ -z "$1" ]
+then
+	echo "provide a dir for the sync!"
+	exit 1
+fi
+
+TO=$2
+if [ -z "$2" ]
+then
+	TO=$1
+fi
+
+FROM="/Volumes/Mirror/Users/helmut/$1/"
+TO="/Users/helmut/$TO/"
+
+echo echo rsync -r  --times --perms --links --delete "$FROM" "$TO"
+read -r -p "Are You Sure? [Y/n] " input
+ 
+case $input in
+      [yY][eE][sS]|[yY])
+            echo "Starting sync"
+            ;;
+      *)
+            echo "OK, qutting..."
+            exit 1
+            ;;
+esac
+
+if [ -d "$FROM" ]
+then
+	rsync -r  --times --perms --links --delete "$FROM" "$TO"
+else
+	echo "$FROM not found"
+	exit 1
+fi
