@@ -1,0 +1,15 @@
+#!/bin/bash
+[ -z "$1" ] && echo 'Please specify the name of the merge request branch' && exit 1
+pr_branch="$1"
+base_branch="$2"
+[ -z "$base_branch" ] && base_branch="develop"
+[ -z "$remote" ] && remote="origin"
+[ -z "$mr_host" ] && mr_host=$(git remotes | grep push | sed -e 's/^[^@]*@\([^:]*\):\(.*\)\.git.*/\1/g')
+[ -z "$mr_project" ] && mr_project=$(git remotes | grep push | sed -e 's/^[^@]*@\([^:]*\):\(.*\)\.git.*/\2/g')
+
+git push $remote HEAD:"$pr_branch"
+git checkout $remote/$pr_branch -b $pr_branch
+open https://$mr_host/$mr_project/merge_requests/new?merge_request%5Bsource_branch%5D=$pr_branch
+
+echo
+echo "Merge request request created. To delete local branch, type:"
