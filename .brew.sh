@@ -119,6 +119,7 @@ binaries=(
   mkcert
   drud/ddev/ddev
   node
+  node@14
   yarn
   dnsmasq
   htop
