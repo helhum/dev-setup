@@ -2,14 +2,14 @@
 
 if [ -z "$1" ]
 then
-	echo "provide a dir for the sync!"
-	exit 1
+      echo "provide a dir for the sync!"
+      exit 1
 fi
 
 TO=$2
 if [ -z "$2" ]
 then
-	TO=$1
+      TO=$1
 fi
 
 FROM="/Volumes/Mirror/Users/helmut/$1/"
@@ -30,8 +30,9 @@ esac
 
 if [ -d "$FROM" ]
 then
-	rsync -r  --times --perms --links --delete "$FROM" "$TO"
+      mkdir -p "$TO"
+      rsync -r  --times --perms --links --delete "$FROM" "$TO"
 else
-	echo "$FROM not found"
-	exit 1
+      echo "$FROM not found"
+      exit 1
 fi
