@@ -155,6 +155,7 @@ apps=(
   enpass
   moneymoney
   appcleaner
+  pastebot
   hazel
   gpg-suite
   bettertouchtool
