@@ -168,6 +168,7 @@ apps=(
   transmit
   insomnia
   tunnelblick
+  tweetbot
   visual-studio-code
 )
 
