@@ -151,6 +151,7 @@ apps=(
   firefox
   imageoptim
   dropbox
+  daisydisk
   enpass
   moneymoney
   appcleaner
