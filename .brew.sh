@@ -143,6 +143,7 @@ apps=(
 # core
   alfred
 # development
+  boop
   macdown
   phpstorm
 # misc
