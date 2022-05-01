@@ -83,13 +83,13 @@ function digga() {
     dig +nocmd "$1" any +multiline +noall +answer;
 }
 
-# `a` with no arguments opens the current directory in Atom Editor, otherwise
+# `vc` with no arguments opens the current directory in VS Code Editor, otherwise
 # opens the given location
-function a() {
+function vs() {
     if [ $# -eq 0 ]; then
-        atom .;
+        code .;
     else
-        atom "$@";
+        code "$@";
     fi;
 }
 
