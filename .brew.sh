@@ -198,6 +198,9 @@ mas upgrade
 
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
 quicklookFeatures=(
+  apparency
+  quicklookase
+  qlvideo
   qlcolorcode
   qlstephen
   qlmarkdown
@@ -211,6 +214,9 @@ quicklookFeatures=(
 )
 echo "[+] install quicklook features ..."
 brew install --cask ${quicklookFeatures[@]}
+# remove quartantaine attribute to make the plugins work
+xattr -d -r com.apple.quarantine ~/Library/QuickLook
+
 
 # Set login items
 osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/BetterTouchTool.app", hidden:false}' > /dev/null
