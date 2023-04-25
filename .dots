@@ -53,7 +53,7 @@ function runDots() {
             echo "Setting sensible OSX defaults."
             echo "------------------------------"
             echo ""
-            ./.osx.sh
+            ./.osx.sh "Trillian"
         fi
         if [ $ARG == "php" ] || [ $ARG == "all" ]; then
             # Run the php.sh Script

@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+if [ -z "$1" ]
+then
+      echo "provide a computer name"
+      exit 1
+fi
+COMPUTER_NAME="$1"
+
 # ~/osx.sh — Originally from https://mths.be/osx
 
 # Ask for the administrator password upfront
@@ -13,10 +20,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "trillian"
-sudo scutil --set HostName "trillian"
-sudo scutil --set LocalHostName "trillian"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "trillian"
+sudo scutil --set ComputerName "$COMPUTER_NAME"
+sudo scutil --set HostName "$COMPUTER_NAME"
+sudo scutil --set LocalHostName "$COMPUTER_NAME"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$COMPUTER_NAME"
 
 # Set standby delay to 24 hours (default is 1 hour or 3600)
 #sudo pmset -a standbydelay 86400
