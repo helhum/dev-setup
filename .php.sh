@@ -30,3 +30,5 @@ composerPackages=(
 )
 
 php74 $HOME/.bin/composer global require ${composerPackages[@]}
+
+$(brew --prefix)/Cellar/php@8.1/*/bin/pecl install xdebug
