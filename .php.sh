@@ -5,10 +5,9 @@ brew tap shivammathur/php
 binaries=(
   php
   shivammathur/php/php@5.6
-  shivammathur/php/php@7.0
   shivammathur/php/php@7.2
   shivammathur/php/php@7.4
-  shivammathur/php/php@8.0
+  shivammathur/php/php@8.1
 )
 
 brew install ${binaries[@]}
