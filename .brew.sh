@@ -61,6 +61,7 @@ brew install vim
 #brew install binutils
 #brew install binwalk
 #brew install cifer
+brew install coreutils
 #brew install dex2jar
 #brew install dns2tcp
 #brew install fcrackzip
@@ -90,6 +91,7 @@ brew install git
 #brew install git-flow
 brew install git-extras
 brew install hub
+brew install jq
 #brew install graphicsmagick
 #brew install lua
 #brew install lynx
