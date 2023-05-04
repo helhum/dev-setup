@@ -174,6 +174,7 @@ apps=(
   tunnelblick
   tweetbot
   visual-studio-code
+  superduper
 )
 
 echo "[+] installing apps ..."
