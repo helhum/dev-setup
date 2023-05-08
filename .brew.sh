@@ -175,6 +175,7 @@ apps=(
   tweetbot
   visual-studio-code
   superduper
+  sf-symbols
 )
 
 echo "[+] installing apps ..."
