@@ -128,6 +128,7 @@ binaries=(
   youtube-dl
   thefuck
   mas
+  howdoi
 )
 
 brew install ${binaries[@]}
