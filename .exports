@@ -28,3 +28,6 @@ export DIR_drop="$HOME/Dropbox"
 export DIR_dl="$HOME/Downloads"
 export DIR_dp="$HOME/Desktop"
 export DIR_devsetup="$HOME/Developer/dev-setup"
+
+# Apps
+export DDEV_NONINTERACTIVE=true
